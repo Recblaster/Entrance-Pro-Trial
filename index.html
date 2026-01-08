@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Master Physics with AI-Powered Flashcards">
-    <title>PhysicsPro - Master Physics with AI-Powered Flashcards</title>
+    <meta name="description"
+        content="EntrancePro - A comprehensive JEE preparation platform with interactive flashcards and concept mastery. Complete Physics syllabus available, Maths & Chemistry coming soon.">
+    <title>EntrancePro - Master JEE with AI-Powered Flashcards</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap');
@@ -227,7 +228,6 @@
             text-decoration: none;
             transition: all 0.3s ease;
             white-space: nowrap;
-            /* Tweak 1 */
         }
 
         .logo:hover {
@@ -293,7 +293,6 @@
             position: relative;
             overflow: hidden;
             white-space: nowrap;
-            /* Tweak 1 */
         }
 
         .btn::before {
@@ -400,8 +399,33 @@
             font-weight: 400;
             color: var(--text-secondary);
             max-width: 650px;
-            margin: 0 auto 50px;
+            margin: 0 auto 30px;
             line-height: 1.7;
+        }
+
+        .hero-description {
+            font-size: 17px;
+            font-weight: 400;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+            padding: 20px 30px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .hero-description strong {
+            color: var(--primary-light);
+            font-weight: 600;
+        }
+
+        .hero-description .coming-soon {
+            color: var(--secondary);
+            font-weight: 600;
         }
 
         .hero-cta {
@@ -489,7 +513,6 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border-radius: 8px;
-            /* Tweak 2 - initially hide for animation */
             opacity: 0;
         }
 
@@ -555,6 +578,34 @@
             box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
         }
 
+        /* Available Now Badge */
+        .available-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
+            border: 1px solid var(--success);
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--success);
+            margin-bottom: 20px;
+        }
+
+        .available-badge::before {
+            content: '✓';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            background: var(--success);
+            color: white;
+            border-radius: 50%;
+            font-size: 11px;
+        }
+
         /* "Why Students Love..." Section */
         .benefits-showcase {
             margin-top: 80px;
@@ -590,7 +641,6 @@
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        /* Tweak 3: Hover effect and default state */
         .benefit-item .benefit-icon-large {
             transform: scale(1.1) rotate(5deg);
             box-shadow: 0 0 40px var(--glow-primary);
@@ -598,7 +648,6 @@
 
         .benefit-item:hover .benefit-icon-large {
             transform: scale(1.15) rotate(8deg);
-            /* Make hover slightly more exaggerated */
         }
 
 
@@ -698,7 +747,6 @@
             margin-bottom: 40px;
         }
 
-        /* Tweak 2 */
         .features-list li {
             display: flex;
             align-items: center;
@@ -707,7 +755,6 @@
             color: var(--text-secondary);
             font-size: 16px;
             opacity: 0;
-            /* Initially hide for animation */
         }
 
         .features-list li.is-visible {
@@ -728,6 +775,21 @@
             color: white;
             flex-shrink: 0;
             box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .coming-icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
 
         /* Roadmap Section */
@@ -911,6 +973,12 @@
             flex-shrink: 0;
         }
 
+        .available-now {
+            background: linear-gradient(135deg, var(--success), var(--accent-dark));
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
         .in-progress {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: #fff;
@@ -927,6 +995,79 @@
             background: transparent;
             border-color: var(--accent);
             color: var(--accent);
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 0;
+            background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.03) 0%, transparent 70%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            padding: 40px;
+            text-align: left;
+        }
+
+        .testimonial-quote {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-style: italic;
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .testimonial-quote::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 48px;
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--primary);
+            opacity: 0.5;
+            line-height: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .testimonial-info h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .testimonial-info p {
+            font-size: 14px;
+            color: var(--text-muted);
         }
 
         /* Modal, FAQ, Footer */
@@ -1077,6 +1218,7 @@
             padding: 60px 0 40px;
             margin-top: 80px;
             position: relative;
+            text-align: center;
         }
 
         .footer::before {
@@ -1100,32 +1242,8 @@
             font-size: 16px;
         }
 
-        /* === FAQ Anchor Link Styling === */
-        .faq-answer a {
-            color: var(--primary-light);
-            font-weight: 600;
-            text-decoration: underline;
-            text-decoration-style: dotted;
-            text-decoration-thickness: 1.5px;
-            text-underline-offset: 4px;
-            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .faq-answer a:hover {
-            color: var(--secondary);
-            text-decoration-style: solid;
-            text-shadow: 0 0 10px var(--glow-secondary);
-        }
-
-        /* === FINAL TWEAK FOR FOOTER CENTERING & STYLING === */
-        .footer {
-            /* This property is the key to centering the text */
-            text-align: center;
-        }
-
         .footer p .heart {
-            color: rgb(0, 255, 0);
-            /* A nice red color for the heart */
+            color: var(--error);
             display: inline-block;
             margin: 0 4px;
             animation: heartbeat 1.5s infinite ease-in-out;
@@ -1143,6 +1261,23 @@
             }
         }
 
+        /* === FAQ Anchor Link Styling === */
+        .faq-answer a {
+            color: var(--primary-light);
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-decoration-thickness: 1.5px;
+            text-underline-offset: 4px;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .faq-answer a:hover {
+            color: var(--secondary);
+            text-decoration-style: solid;
+            text-shadow: 0 0 10px var(--glow-secondary);
+        }
+
         /* Responsive Fixes */
         @media (max-width: 768px) {
             .nav-container {
@@ -1151,12 +1286,10 @@
 
             .logo {
                 font-size: 24px;
-                /* Tweak 1 */
             }
 
             .header .btn {
                 padding: 10px 16px;
-                /* Tweak 1 */
                 font-size: 14px;
             }
 
@@ -1175,6 +1308,11 @@
 
             .hero-cta {
                 flex-direction: column;
+            }
+
+            .hero-description {
+                padding: 16px 20px;
+                font-size: 15px;
             }
 
             .benefit-item,
@@ -1228,19 +1366,22 @@
 
             .pricing-card {
                 padding: 40px 24px;
-                /* Reduced side padding */
             }
 
             .pricing-card .btn-primary {
-                /* Make the button stretch edge-to-edge */
                 margin-left: -24px;
                 margin-right: -24px;
                 margin-bottom: -40px;
-                /* Sits flush at the bottom */
                 width: calc(100% + 48px);
-                /* 100% + (2 * new padding) */
                 border-radius: 0 0 20px 20px;
-                /* Match the card's bottom corners */
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                padding: 30px;
             }
         }
     </style>
@@ -1251,10 +1392,11 @@
 
     <header class="header">
         <div class="nav-container">
-            <a href="#" class="logo">⚡ PhysicsPro</a>
+            <a href="#" class="logo">🎯 EntrancePro</a>
             <ul class="nav-links">
                 <li><a href="#features">Chapters</a></li>
                 <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
             <a href="#pricing" class="btn btn-primary">Get Started</a>
@@ -1264,16 +1406,21 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-badge">
-                ✨ Limited Time: 25% OFF for Early Birds
+                🚀 Now Live: Complete Physics Syllabus for JEE
             </div>
-            <h1>Master Physics with Smart Flashcards</h1>
+            <h1>Master JEE with Smart Flashcards</h1>
             <p class="hero-subtitle">
-                Digital Flashcards designed for 11th & 12th grade students. Learn faster, remember longer, and ace your
-                physics exams with confidence.
+                Interactive flashcards designed for JEE aspirants. Learn faster, remember longer, and ace your entrance
+                exams with confidence.
             </p>
+            <div class="hero-description">
+                A comprehensive <strong>JEE preparation platform</strong> built around interactive flashcards and
+                concept mastery. Start with the <strong>complete Physics syllabus</strong> (Class 11 & 12), with <span
+                    class="coming-soon">Mathematics and Chemistry modules coming soon</span>.
+            </div>
             <div class="hero-cta">
                 <a href="#pricing" class="btn btn-primary">Start Learning Now</a>
-                <a href="#features" class="btn btn-secondary">Explore Chapters</a>
+                <a href="#features" class="btn btn-secondary">Explore Physics Chapters</a>
             </div>
         </div>
     </section>
@@ -1281,12 +1428,13 @@
     <section id="features" class="section">
         <div class="section-container">
             <div class="section-header">
-                <h2 class="section-title">Complete Syllabus Coverage</h2>
-                <p class="section-subtitle">Every topic, formula, and concept you need to master physics. With learn
-                    more feature and interactive content.</p>
+                <h2 class="section-title">Physics Syllabus — Available Now</h2>
+                <p class="section-subtitle">Complete coverage of Class 11 & 12 Physics. Every topic, formula, and
+                    concept you need to master for JEE.</p>
             </div>
             <div class="chapters-grid">
                 <div class="chapter-card glass-card">
+                    <span class="available-badge">Available Now</span>
                     <h3>📚 Grade 11th Physics</h3>
                     <ul class="chapter-list">
                         <li class="chapter-item">
@@ -1340,6 +1488,7 @@
                     </ul>
                 </div>
                 <div class="chapter-card glass-card">
+                    <span class="available-badge">Available Now</span>
                     <h3>🔬 Grade 12th Physics</h3>
                     <ul class="chapter-list">
                         <li class="chapter-item">
@@ -1400,8 +1549,8 @@
     <section id="benefits" class="section">
         <div class="section-container">
             <div class="section-header">
-                <h2 class="section-title">Why Students Love PhysicsPro</h2>
-                <p class="section-subtitle">A powerful, modern approach to mastering physics concepts.</p>
+                <h2 class="section-title">Why Students Love EntrancePro</h2>
+                <p class="section-subtitle">A powerful, modern approach to mastering JEE concepts.</p>
             </div>
             <div class="benefits-showcase">
                 <div class="benefit-item">
@@ -1440,8 +1589,47 @@
                     <div class="benefit-icon-large">📱</div>
                     <div class="benefit-text">
                         <h3>Study Anywhere, Anytime</h3>
-                        <p>Your entire physics syllabus, right in your pocket. Access your flashcards on any device and
+                        <p>Your entire JEE syllabus, right in your pocket. Access your flashcards on any device and
                             turn any spare moment—your commute, a break—into a productive study session.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">What Students Are Saying</h2>
+                <p class="section-subtitle">Real feedback from JEE aspirants using EntrancePro</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-card">
+                    <p class="testimonial-quote">
+                        The Physics flashcards are incredibly effective. The "Learn More" sections saved me hours of
+                        searching through textbooks. If Maths and Chemistry are added, this would be one of the best JEE
+                        prep platforms out there.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">R</div>
+                        <div class="testimonial-info">
+                            <h4>Rahul S.</h4>
+                            <p>JEE 2025 Aspirant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card">
+                    <p class="testimonial-quote">
+                        Finally, a study tool that respects my time. The JEE-focused approach means every card is
+                        relevant. Waiting eagerly for the Chemistry module — this is exactly what I needed for revision.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">P</div>
+                        <div class="testimonial-info">
+                            <h4>Priya M.</h4>
+                            <p>JEE 2025 Aspirant</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1451,21 +1639,23 @@
     <section id="pricing" class="section">
         <div class="section-container">
             <div class="section-header">
-                <h2 class="section-title">Unlock Your Physics Potential</h2>
-                <p class="section-subtitle">One-time payment, lifetime access to all content</p>
+                <h2 class="section-title">Unlock Your JEE Potential</h2>
+                <p class="section-subtitle">One-time payment, lifetime access to all Physics content + free updates</p>
             </div>
             <div class="pricing-card glass-card">
-                <div class="pricing-badge">25% OFF</div>
-                <h3 class="pricing-title">PhysicsPro Complete</h3>
+                <div class="pricing-badge">Early Bird</div>
+                <h3 class="pricing-title">EntrancePro Physics</h3>
                 <div class="price">₹999</div>
                 <p class="price-subtitle">One-time payment • Lifetime access</p>
                 <ul class="features-list">
-                    <li><span class="check-icon">✓</span> Complete 11th & 12th Grade Syllabus</li>
+                    <li><span class="check-icon">✓</span> Complete 11th & 12th Grade Physics</li>
                     <li><span class="check-icon">✓</span> Very High-Quality Flashcards</li>
-                    <li><span class="check-icon">✓</span> Constant Updates & Improvements</li>
-                    <li><span class="check-icon">✓</span> Learn-More deep dives with formulas & worked examples</li>
+                    <li><span class="check-icon">✓</span> Learn-More deep dives with formulas & examples</li>
                     <li><span class="check-icon">✓</span> JEE Use Cases for every topic</li>
                     <li><span class="check-icon">✓</span> 24/7 Access on All Devices</li>
+                    <li><span class="check-icon">✓</span> Free updates & improvements</li>
+                    <li><span class="coming-icon">⏳</span> <em style="color: var(--text-muted);">Maths & Chemistry —
+                            Coming Soon (included free)</em></li>
                 </ul>
                 <a href="Form.html" class="btn btn-primary" style="width: 100%;">
                     🚀 Start Mastering Physics Now
@@ -1474,33 +1664,53 @@
         </div>
     </section>
 
-    <section id="updates" class="section">
+    <section id="roadmap" class="section">
         <div class="section-container">
             <div class="section-header">
-                <h2 class="section-title">More From Us</h2>
-                <p class="section-subtitle">We're constantly improving your learning experience. Here's a sneak peek at
-                    what's coming next.</p>
+                <h2 class="section-title">🚧 Coming Soon</h2>
+                <p class="section-subtitle">We're actively building the complete JEE preparation toolkit. Here's what's
+                    on our roadmap.</p>
             </div>
             <div class="roadmap-container">
                 <div class="roadmap-line"></div>
                 <div class="roadmap-item">
                     <div class="roadmap-content glass-card">
                         <div class="roadmap-header">
-                            <h3><span class="roadmap-icon">📷</span> Images & Diagrams</h3>
+                            <h3><span class="roadmap-icon">⚛️</span> Physics Flashcards</h3>
+                            <span class="roadmap-status available-now">Live Now</span>
+                        </div>
+                        <p>Complete Class 11 & 12 Physics syllabus with 24 chapters, Learn-More sections, and
+                            JEE-focused use cases. Available today!</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-content glass-card">
+                        <div class="roadmap-header">
+                            <h3><span class="roadmap-icon">📐</span> Mathematics Flashcards</h3>
                             <span class="roadmap-status in-progress">In Progress</span>
                         </div>
-                        <p>High-quality images and diagrams to help visualize complex concepts, coming soon to all
-                            flashcards.</p>
+                        <p>Complete Class 11 & 12 Mathematics coverage including Algebra, Calculus, Coordinate Geometry,
+                            and more. Coming soon for all subscribers.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-content glass-card">
+                        <div class="roadmap-header">
+                            <h3><span class="roadmap-icon">🧪</span> Chemistry Flashcards</h3>
+                            <span class="roadmap-status in-progress">In Progress</span>
+                        </div>
+                        <p>Physical, Organic, and Inorganic Chemistry for Class 11 & 12. All reactions, mechanisms, and
+                            concepts for JEE.</p>
                     </div>
                 </div>
                 <div class="roadmap-item">
                     <div class="roadmap-content glass-card">
                         <div class="roadmap-header">
                             <h3><span class="roadmap-icon">💡</span> Interactive Quizzes</h3>
-                            <span class="roadmap-status in-progress">In Progress</span>
+                            <span class="roadmap-status planned">Planned</span>
                         </div>
-                        <p>Test your knowledge with chapter-wise quizzes and instant feedback to help you master every
-                            concept.</p>
+                        <p>Test your knowledge with chapter-wise quizzes and instant feedback. Track your progress and
+                            identify weak areas.</p>
                     </div>
                 </div>
                 <div class="roadmap-item">
@@ -1509,18 +1719,18 @@
                             <h3><span class="roadmap-icon">📗</span> Multi-Subject Formula Sheets</h3>
                             <span class="roadmap-status planned">Planned</span>
                         </div>
-                        <p>Concise formula sheets for PHYSICS, CHEMISTRY & MATHS for quick revision and easy reference.
-                        </p>
+                        <p>Concise, printable formula sheets for Physics, Chemistry & Mathematics — perfect for quick
+                            revision before exams.</p>
                     </div>
                 </div>
                 <div class="roadmap-item">
                     <div class="roadmap-content glass-card">
                         <div class="roadmap-header">
-                            <h3><span class="roadmap-icon">🧪</span> Chemistry Surprise</h3>
+                            <h3><span class="roadmap-icon">📷</span> Images & Diagrams</h3>
                             <span class="roadmap-status exploring">Exploring</span>
                         </div>
-                        <p>Exciting new chemistry content and features are on the way! Your learning toolkit is about to
-                            expand.</p>
+                        <p>High-quality images and diagrams to help visualize complex concepts, coming to all
+                            flashcards.</p>
                     </div>
                 </div>
             </div>
@@ -1531,9 +1741,20 @@
         <div class="section-container">
             <div class="section-header">
                 <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Everything you need to know about PhysicsPro</p>
+                <p class="section-subtitle">Everything you need to know about EntrancePro</p>
             </div>
             <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What subjects are currently available?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Currently, we offer complete Physics flashcards for Class 11 & 12 (24 chapters). Mathematics
+                            and Chemistry are actively in development and will be added at no extra cost to existing
+                            subscribers. Check our <a href="#roadmap">roadmap</a> for updates.</p>
+                    </div>
+                </div>
                 <div class="faq-item">
                     <button class="faq-question">
                         What format are the flashcards in?
@@ -1550,9 +1771,9 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! Pay once and get lifetime access to all current and future content. No subscriptions, no
-                            recurring fees. NOTE: Updates are included at no extra cost while a new product may have
-                            charges.</p>
+                        <p>Yes! Pay once and get lifetime access to all current Physics content plus free updates. When
+                            we launch Maths and Chemistry, early buyers will receive those at no extra cost. No
+                            subscriptions, no recurring fees.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1561,9 +1782,9 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Absolutely! Check out our free sample chapter "Units and Dimensions" to experience the
-                            quality firsthand. We also offer a 7-day money-back guarantee if you're not completely
-                            satisfied. <a href="#features">Here</a></p>
+                        <p>Absolutely! Check out our free sample chapters "Units and Dimensions" and "Electromagnetic
+                            Induction" to experience the quality firsthand. We also offer a 7-day money-back guarantee
+                            if you're not completely satisfied. <a href="#features">Try free chapters here</a></p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1578,12 +1799,12 @@
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        Which curriculum does this cover?
+                        Which exams does this cover?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>The content is excellent preparation of entrance exams such as JEE & NEET. Also our
-                            flashcards cover CBSE, NCERT, and most state board curricula for grades 11 & 12.</p>
+                        <p>EntrancePro is designed specifically for JEE Main & Advanced preparation. The content also
+                            aligns well with NEET, CBSE, and most state board curricula for grades 11 & 12.</p>
                     </div>
                 </div>
             </div>
@@ -1592,8 +1813,8 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2024 PhysicsPro. All rights reserved. Made with <span class="heart">&hearts;</span> for physics
-                students worldwide.</p>
+            <p>&copy; 2025 EntrancePro — Built for JEE Aspirants. Made with <span class="heart">&hearts;</span> by
+                students, for students.</p>
         </div>
     </footer>
 
@@ -1601,9 +1822,10 @@
         <div class="modal-content">
             <button class="modal-close">&times;</button>
             <div class="modal-icon">🔓</div>
-            <h3 class="modal-title">Unlock All Chapters</h3>
-            <p class="modal-subtitle">Get instant access to all 24 chapters and start acing your physics exams today.
-                Your success is just one click away!</p>
+            <h3 class="modal-title">Unlock All Physics Chapters</h3>
+            <p class="modal-subtitle">Get instant access to all 24 Physics chapters and start acing your JEE exams
+                today.
+                Plus, get Maths & Chemistry free when they launch!</p>
             <a href="Form.html" class="btn btn-primary" style="width: 100%;" id="modal-cta">
                 🚀 Get Full Access Now
             </a>
@@ -1637,6 +1859,12 @@
                     duration: 900
                 }, '-=400')
                 .add({
+                    targets: '.hero-description',
+                    opacity: [0, 1],
+                    translateY: [30, 0],
+                    duration: 800
+                }, '-=300')
+                .add({
                     targets: '.hero-cta .btn',
                     opacity: [0, 1],
                     translateY: [40, 0],
@@ -1668,7 +1896,7 @@
                 observer.observe(target);
             });
 
-            // Observer for cards that need internal list animations (Tweak 2)
+            // Observer for cards that need internal list animations
             const cardObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1707,7 +1935,7 @@
                 });
             }, { threshold: 0.1 });
 
-            document.querySelectorAll('.chapter-card, .pricing-card').forEach(card => cardObserver.observe(card));
+            document.querySelectorAll('.chapter-card, .pricing-card, .testimonial-card').forEach(card => cardObserver.observe(card));
 
             // Premium Modal Logic
             const modal = document.getElementById('premium-modal');
